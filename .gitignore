@@ -1,0 +1,90 @@
+# Git無視ファイル設定（プライベート管理用 - チーム開発最適化版）
+
+# ===== セキュリティ関連（必須除外） =====
+.env
+.env.backup
+.env.production
+.env.local
+*.key
+*.pem
+
+# ===== 依存関係ディレクトリ（巨大なため除外） =====
+node_modules/
+vendor/
+# 注: package-lock.json, composer.lock はチーム開発のためコミットに含める
+
+# ビルド生成ファイル
+/public/build/
+/public/hot
+/public/storage
+/storage/*.key
+
+# Laravel関連
+/bootstrap/cache/*
+!bootstrap/cache/.gitkeep
+/storage/app/*
+!storage/app/.gitkeep
+!storage/app/public
+/storage/app/public/*
+!storage/app/public/.gitkeep
+/storage/framework/cache/*
+!storage/framework/cache/.gitkeep
+!storage/framework/cache/data
+/storage/framework/cache/data/*
+!storage/framework/cache/data/.gitkeep
+/storage/framework/sessions/*
+!storage/framework/sessions/.gitkeep
+/storage/framework/testing/*
+!storage/framework/testing/.gitkeep
+/storage/framework/views/*
+!storage/framework/views/.gitkeep
+/storage/logs/*
+!storage/logs/.gitkeep
+/storage/debugbar/*
+!storage/debugbar/.gitkeep
+
+# Python関連
+.venv/
+fastapi_env/
+fastapi/venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE・エディタ関連
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS生成ファイル
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# 一時ファイル・キャッシュ
+*.tmp
+*.temp
+.cache/
+.php-cs-fixer.cache
+*.log
+
+# セットアップ関連(一時ファイル)
+*.backup
+*.old
+xampp-installer.exe
+install-log.txt
+
+# インストーラー（大容量ファイル）
+!/installers/.gitkeep
+
+# テスト関連
+/coverage
+.phpunit.result.cache
